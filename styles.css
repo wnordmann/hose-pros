@@ -177,6 +177,37 @@ body {
     margin-bottom: 0.5rem;
 }
 
+/* Modeal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    display: block;
+    margin: 5% auto;
+    max-width: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
 /* Services Section */
 .services-section h2 {
     text-align: center;

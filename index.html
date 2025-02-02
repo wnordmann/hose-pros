@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hose Pros - Professional Pressure Washing</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
 </head>
 
 <body>
@@ -27,14 +28,13 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1>Hose Pros</h1>
-            <p class="tagline">Professional Firefighters Delivering Premier Pressure Washing Services</p>
+    <section class="hero-section">
+        <div class="overlay">
+            <img src="images/hose-pros-logo.jpg" alt="Hose Pros Logo" class="hero-logo" />
+            <p></p>
             <a href="#contact" class="btn-primary">Get a Free Quote</a>
         </div>
     </section>
-
     <!-- WHY CHOOSE US -->
     <section class="why-choose-us">
         <div class="container">
@@ -116,7 +116,11 @@
 
                 <!-- 3) Driveways & Sidewalks -->
                 <div class="service-card">
-                    <img src="images/driveway-wash.jpg" alt="Driveways and Sidewalks" />
+                    <a href="images/driveway-full.jpg" data-lightbox="services-group"
+                        data-title="Driveways & Sidewalks">
+                        <!-- Thumbnail displayed on page -->
+                        <img src="images/driveway.jpg" alt="Driveway" />
+                    </a>
                     <h3>Driveways & Sidewalks</h3>
                     <p>High-pressure cleaning for concrete or asphalt surfaces.</p>
                 </div>
@@ -247,7 +251,9 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 
 </html>
