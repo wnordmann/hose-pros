@@ -202,36 +202,33 @@
 
             <div class="contact-details">
                 <p><strong>Phone:</strong> (314)229-8850</p>
-                <p><strong>Email:</strong> <a href="mailto:info@hosepros.com">info@hosepros.com</a></p>
+                <!-- <p><strong>Email:</strong> <a href="mailto:info@hosepros.com">info@hosepros.com</a></p> -->
                 <p><strong>Serving:</strong> St. Louis Missouri</p>
             </div>
 
             <form class="contact-form" target="_blank" action="https://formsubmit.co/aae8fe1923c35c4cdffe5365af72f772"
                 method="POST">
-                <label for="name">Name*</label>
-                <input type="text" id="name" placeholder="Your Name" required />
-
-                <label for="email">Email*</label>
-                <input type="email" id="email" placeholder="Your Email" required />
-
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" placeholder="(314)229-8850" />
-
-                <label for="service">Service Requested</label>
-                <select id="service">
-                    <option value="">--Please choose an option--</option>
-                    <option value="house-wash">House Wash</option>
-                    <option value="roof-wash">Roof Wash</option>
-                    <option value="driveways">Driveways & Sidewalks</option>
-                    <option value="patios">Patios/Decks/Fences</option>
-                    <option value="paver-sanding">Paver Sanding & Sealing</option>
-                    <option value="other">Other/Not Sure</option>
-                </select>
-
-                <label for="message">Additional Details</label>
-                <textarea id="message" rows="5" placeholder="Tell us more about your project..."></textarea>
-
-                <button type="submit" class="btn-primary">Submit</button>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" id="name" placeholder="Your Name" required />
+                            <input type="email" id="email" placeholder="Your Email" required />
+                            <input type="tel" id="phone" placeholder="(314)229-8850" />
+                            <label for="service">Service Requested</label>
+                            <select id="service">
+                                <option value="">--Please choose an option--</option>
+                                <option value="house-wash">House Wash</option>
+                                <option value="roof-wash">Roof Wash</option>
+                                <option value="driveways">Driveways & Sidewalks</option>
+                                <option value="patios">Patios/Decks/Fences</option>
+                                <option value="paver-sanding">Paver Sanding & Sealing</option>
+                                <option value="other">Other/Not Sure</option>
+                            </select>
+                            <textarea id="message" rows="5" placeholder="Tell us more about your project..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit</button>
+                </div>
             </form>
         </div>
     </section>
