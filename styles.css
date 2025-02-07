@@ -158,6 +158,24 @@ body {
     text-align: center;
 }
 
+.team-card .images-row {
+    display: flex;
+    /* put images side by side */
+    justify-content: center;
+    /* center them horizontally */
+    gap: 1rem;
+    /* space between images */
+    margin-bottom: 1rem;
+    /* space under the images */
+}
+
+.team-card .images-row img {
+    width: 300px;
+    /* or pick a size that fits your layout */
+    height: auto;
+    border-radius: 6px;
+}
+
 .team-cards {
     display: flex;
     flex-wrap: wrap;
