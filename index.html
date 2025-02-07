@@ -211,11 +211,11 @@
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col">
-                            <input type="text" id="name" placeholder="Your Name" required />
-                            <input type="email" id="email" placeholder="Your Email" required />
-                            <input type="tel" id="phone" placeholder="(314)229-8850" />
+                            <input type="text" id="name" name="name" placeholder="Your Name" required />
+                            <input type="email" id="email" name="id" placeholder="Your Email" required />
+                            <input type="tel" id="phone" name="phone" placeholder="(314)229-8850" />
                             <label for="service">Service Requested</label>
-                            <select id="service">
+                            <select id="service" name="service">
                                 <option value="">--Please choose an option--</option>
                                 <option value="house-wash">House Wash</option>
                                 <option value="roof-wash">Roof Wash</option>
@@ -224,7 +224,8 @@
                                 <option value="paver-sanding">Paver Sanding & Sealing</option>
                                 <option value="other">Other/Not Sure</option>
                             </select>
-                            <textarea id="message" rows="5" placeholder="Tell us more about your project..."></textarea>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Tell us more about your project..."></textarea>
                         </div>
                     </div>
                     <button type="submit" class="btn-primary">Submit</button>
