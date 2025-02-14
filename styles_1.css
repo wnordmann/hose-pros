@@ -25,19 +25,24 @@ html {
 
 /* TOP CONTACT BAR */
 .top-contact {
+    position: fixed;
+    /* stay at the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
     background: #B71C1C;
-    /* Firefighter-red or your preferred color */
+    /* your red color */
     color: #fff;
     padding: 0.5rem 1rem;
+    z-index: 9999;
 }
 
-.top-contact-content {
+.top-contact .top-contact-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* center horizontally; adjust if you want phone left, button right */
+    /* adjust as needed */
     gap: 1rem;
-    /* space between phone number & button */
 }
 
 .phone-label {
@@ -72,7 +77,11 @@ html {
 
 /* HERO SECTION */
 .hero-section {
-    background: url('images/hero.jpg') center/cover no-repeat;
+    /* 
+    If your .top-contact bar is about 60px tall (padding + font size), 
+    make sure you have at least 60px of top margin or padding here.
+  */
+    margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
