@@ -152,23 +152,38 @@ html {
 
 /* RESPONSIVE (MOBILE) */
 @media (max-width: 600px) {
+    .top-contact .top-contact-content {
+        /* display: block; */
+        /* or inline-block, grid, etc. */
+        /* text-align: center; */
+        /* if you want content centered */
+    }
+
+    .team-card .images-row img {
+        max-width: 150px;
+    }
+
+    .team-card .images-row {
+        flex-direction: column;
+    }
+
     .hero-logo {
         max-width: 180px;
         /* shrink further on phones if needed */
     }
+}
 
-    .hero-content h1 {
-        font-size: 2rem;
-    }
+.hero-content h1 {
+    font-size: 2rem;
+}
 
-    .tagline {
-        font-size: 1rem;
-    }
+.tagline {
+    font-size: 1rem;
+}
 
-    .top-contact-content {
-        flex-direction: column;
-        /* phone above button, if you'd like */
-    }
+.top-contact-content {
+    flex-direction: row;
+    /* phone above button, if you'd like */
 }
 
 
@@ -483,7 +498,7 @@ html {
 }
 
 /* Responsive */
-@media (max-width: 800px) {
+/*@media (max-width: 800px) {
     .nav-links {
         display: none;
     }
@@ -507,4 +522,4 @@ html {
     .contact-form {
         grid-template-columns: 1fr;
     }
-}
+} */
