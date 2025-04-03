@@ -517,7 +517,7 @@ html {
 }
 
 /* Display the two images side by side */
-.images-row {
+.before-after-gallery .images-row {
     display: flex;
     flex-wrap: wrap;
     /* allows wrapping on smaller screens */
@@ -528,7 +528,7 @@ html {
 }
 
 /* Each column (before or after) */
-.image-col {
+.before-after-gallery .image-col {
     flex: 1;
     /* let columns expand equally */
     min-width: 250px;
@@ -537,7 +537,7 @@ html {
 }
 
 /* Images should fit nicely and be centered */
-.image-col img {
+.before-after-gallery .image-col img {
     width: 100%;
     max-width: 400px;
     /* optional: limit how large they get */
@@ -548,20 +548,20 @@ html {
 }
 
 /* "Before" / "After" label style */
-.label {
+.before-after-gallery .label {
     margin-top: 0.5rem;
     font-weight: bold;
 }
 
 /* Responsive tweaks for very small screens */
 @media (max-width: 600px) {
-    .images-row {
+    .before-after-gallery .images-row {
         flex-direction: column;
         /* stack them vertically on phones */
         align-items: center;
     }
 
-    .image-col {
+    .before-after-gallery .image-col {
         min-width: auto;
         margin-bottom: 1rem;
     }
