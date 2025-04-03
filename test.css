@@ -1,0 +1,82 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container utility */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Section title */
+.before-after-gallery h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Each gallery item (one "before/after" set) */
+.gallery-item {
+    margin-bottom: 2rem;
+}
+
+/* Optional sub-heading style */
+.gallery-item h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Display the two images side by side */
+.images-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* allows wrapping on smaller screens */
+    justify-content: center;
+    /* center them horizontally */
+    gap: 2rem;
+    /* space between columns */
+}
+
+/* Each column (before or after) */
+.image-col {
+    flex: 1;
+    /* let columns expand equally */
+    min-width: 250px;
+    /* ensures columns don't get too narrow */
+    text-align: center;
+}
+
+/* Images should fit nicely and be centered */
+.image-col img {
+    width: 100%;
+    max-width: 400px;
+    /* optional: limit how large they get */
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* "Before" / "After" label style */
+.label {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* Responsive tweaks for very small screens */
+@media (max-width: 600px) {
+    .images-row {
+        flex-direction: column;
+        /* stack them vertically on phones */
+        align-items: center;
+    }
+
+    .image-col {
+        min-width: auto;
+        margin-bottom: 1rem;
+    }
+}
