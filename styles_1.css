@@ -497,20 +497,7 @@ html {
     text-decoration: underline;
 }
 
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Container utility */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 0;
-}
 
 /* Section title */
 .before-after-gallery h2 {
