@@ -1,4 +1,4 @@
-/* RESET / BASE STYLES */
+/* === RESET & BASE === */
 * {
     margin: 0;
     padding: 0;
@@ -600,7 +600,7 @@ html {
     }
 }
 
-/* Universal image improvements */
+/* === Universal Image Styles === */
 img {
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.10);
@@ -611,53 +611,24 @@ img {
     height: auto;
     margin: 0 auto;
 }
-
 img:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 
-/* Remove duplicate border-radius, box-shadow, and margin from specific image classes if present */
-.team-card img,
-.service-card img,
-.gallery-item img,
-.before-after-gallery .image-col img {
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    border: 2px solid #eee;
-    transition: transform 0.2s, box-shadow 0.2s;
-    margin: 0 auto 0.5rem auto;
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.team-card img:hover,
-.service-card img:hover,
-.gallery-item img:hover,
-.before-after-gallery .image-col img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-}
-
-/* For service cards, keep object-fit for uniformity */
+/* === Service Card Images === */
 .service-card img {
     height: 150px;
     object-fit: cover;
 }
 
-/* For team card grid images, keep width if needed */
+/* === Team Card Images === */
 .team-card .images-row img {
     width: 300px;
     height: auto;
 }
 
-/* For gallery grid, keep object-fit for uniformity */
-.gallery-item img {
-    object-fit: cover;
-}
-
-/* Keep before/after images at a reasonable max size */
+/* === Before/After Gallery Images === */
 .before-after-gallery .image-col img {
     max-width: 400px;
 }
@@ -707,3 +678,21 @@ img:hover {
     pointer-events: none;
     border-radius: 12px;
 }
+
+/* === LAYOUT === */
+/* ... */
+
+/* === IMAGES === */
+/* ... */
+
+/* === SERVICES === */
+/* ... */
+
+/* === GALLERY === */
+/* ... */
+
+/* === BEFORE/AFTER GALLERY === */
+/* ... */
+
+/* === FOOTER === */
+/* ... */
