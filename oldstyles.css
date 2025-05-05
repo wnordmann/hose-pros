@@ -1,0 +1,157 @@
+/* RESET / BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Smooth scrolling for anchor links (optional) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Container Utility */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* TOP CONTACT BAR */
+.top-contact {
+    background: #B71C1C;
+    /* Firefighter-red or your preferred color */
+    color: #fff;
+    padding: 0.5rem 1rem;
+}
+
+.top-contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* center horizontally; adjust if you want phone left, button right */
+    gap: 1rem;
+    /* space between phone number & button */
+}
+
+.phone-label {
+    font-weight: bold;
+}
+
+.phone-number {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.phone-number:hover {
+    text-decoration: underline;
+}
+
+/* Button in top bar */
+.btn-top-contact {
+    background: #fff;
+    color: #B71C1C;
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-top-contact:hover {
+    background: #f8f8f8;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: url('images/hero.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 6px;
+}
+
+.hero-logo {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.hero-content h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background: #B71C1C;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #8c1414;
+}
+
+/* SERVICES SECTION */
+.services-section {
+    padding: 2rem 0;
+}
+
+.services-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    padding: 2rem 0;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* RESPONSIVE (MOBILE) */
+@media (max-width: 600px) {
+    .hero-logo {
+        max-width: 180px;
+        /* shrink further on phones if needed */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+}

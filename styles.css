@@ -25,19 +25,24 @@ html {
 
 /* TOP CONTACT BAR */
 .top-contact {
+    position: fixed;
+    /* stay at the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
     background: #B71C1C;
-    /* Firefighter-red or your preferred color */
+    /* your red color */
     color: #fff;
     padding: 0.5rem 1rem;
+    z-index: 9999;
 }
 
-.top-contact-content {
+.top-contact .top-contact-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* center horizontally; adjust if you want phone left, button right */
+    /* adjust as needed */
     gap: 1rem;
-    /* space between phone number & button */
 }
 
 .phone-label {
@@ -66,13 +71,17 @@ html {
 }
 
 .btn-top-contact:hover {
-    background: #f8f8f8;
+    background: #e9bebe;
+    text-decoration: underline;
 }
 
 /* HERO SECTION */
 .hero-section {
-    background: url('images/hero.jpg') center/cover no-repeat;
-    height: 80vh;
+    /* 
+    If your .top-contact bar is about 60px tall (padding + font size), 
+    make sure you have at least 60px of top margin or padding here.
+  */
+    margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,10 +96,11 @@ html {
 }
 
 .hero-logo {
-    max-width: 300px;
+    max-width: 700px;
     height: auto;
     display: block;
     margin: 0 auto 1rem;
+    padding: 2%;
 }
 
 .hero-content h1 {
@@ -142,16 +152,558 @@ html {
 
 /* RESPONSIVE (MOBILE) */
 @media (max-width: 600px) {
+    .top-contact .top-contact-content {
+        /* display: block; */
+        /* or inline-block, grid, etc. */
+        /* text-align: center; */
+        /* if you want content centered */
+    }
+
+    .team-card .images-row img {
+        max-width: 150px;
+    }
+
+    .team-card .images-row {
+        flex-direction: column;
+    }
+
     .hero-logo {
         max-width: 180px;
         /* shrink further on phones if needed */
     }
+}
 
-    .hero-content h1 {
-        font-size: 2rem;
-    }
+.hero-content h1 {
+    font-size: 2rem;
+}
 
-    .tagline {
-        font-size: 1rem;
+.tagline {
+    font-size: 1rem;
+}
+
+.top-contact-content {
+    flex-direction: row;
+    /* phone above button, if you'd like */
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 0.8rem;
+    transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: #B71C1C;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.tagline {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background: #B71C1C;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background: #8c1414;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    background: #f0f0f0;
+}
+
+.why-choose-us h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.reason {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reason h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* About Section */
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.mission {
+    font-style: italic;
+    text-align: center;
+}
+
+.team-card .images-row {
+    display: flex;
+    /* put images side by side */
+    justify-content: center;
+    /* center them horizontally */
+    gap: 1rem;
+    /* space between images */
+    margin-bottom: 1rem;
+    /* space under the images */
+}
+
+.team-card .images-row img {
+    width: 300px;
+    /* or pick a size that fits your layout */
+    height: auto;
+    border-radius: 6px;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-card {
+    width: 200px;
+    text-align: center;
+}
+
+.team-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+/* Modeal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    display: block;
+    margin: 5% auto;
+    max-width: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Services Section */
+.services-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    gap: 1.5rem;
+    /* space between items */
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 6px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-note {
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+/* Gallery Section */
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background: #f9f9f9;
+    padding: 2rem 0;
+}
+
+.testimonials-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.testimonial {
+    background: #fff;
+    max-width: 700px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Contact Section */
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    justify-self: start;
+    padding: 0.8rem 1.5rem;
+    background: #B71C1C;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #8c1414;
+}
+
+/* Footer */
+.site-footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.site-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Section title */
+.before-after-gallery h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Each gallery item (one "before/after" set) */
+.gallery-item {
+    margin-bottom: 2rem;
+}
+
+/* Optional sub-heading style */
+.gallery-item h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Display the two images side by side */
+.before-after-gallery .images-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center; /* vertically center for VS circle */
+    position: relative;  /* for VS circle positioning */
+}
+
+/* Add a VS circle between images on desktop */
+.before-after-gallery .images-row::before {
+    content: "VS";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #B71C1C;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1;
+}
+
+.before-after-gallery .image-col {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* above VS circle */
+}
+
+.before-after-gallery .image-col img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border: 2px solid #eee;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.before-after-gallery .image-col img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.before-after-gallery .label {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    display: inline-block;
+    background: #f5f5f5;
+    color: #B71C1C;
+    padding: 0.3em 1em;
+    border-radius: 16px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* Responsive tweaks for very small screens */
+@media (max-width: 600px) {
+    .before-after-gallery .images-row {
+        flex-direction: column;
+        align-items: center;
     }
+    .before-after-gallery .images-row::before {
+        display: none; /* Hide VS circle on mobile */
+    }
+    .before-after-gallery .image-col {
+        min-width: auto;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Universal image improvements */
+img {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border: 2px solid #eee;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+/* Remove duplicate border-radius, box-shadow, and margin from specific image classes if present */
+.team-card img,
+.service-card img,
+.gallery-item img,
+.before-after-gallery .image-col img {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border: 2px solid #eee;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 0 auto 0.5rem auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.team-card img:hover,
+.service-card img:hover,
+.gallery-item img:hover,
+.before-after-gallery .image-col img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+/* For service cards, keep object-fit for uniformity */
+.service-card img {
+    height: 150px;
+    object-fit: cover;
+}
+
+/* For team card grid images, keep width if needed */
+.team-card .images-row img {
+    width: 300px;
+    height: auto;
+}
+
+/* For gallery grid, keep object-fit for uniformity */
+.gallery-item img {
+    object-fit: cover;
+}
+
+/* Keep before/after images at a reasonable max size */
+.before-after-gallery .image-col img {
+    max-width: 400px;
+}
+
+.image-hover-wrap {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image-hover-wrap img {
+    display: block;
+    width: 100%;
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1);
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(183,28,28,0.45);
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: opacity 0.25s;
+    pointer-events: none;
+}
+
+.image-hover-wrap:hover img {
+    transform: scale(1.07) rotate(-1deg);
+}
+
+.image-hover-wrap:hover .img-overlay {
+    opacity: 1;
+}
+
+.image-hover-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0; top: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(183,28,28,0.18) 100%);
+    pointer-events: none;
+    border-radius: 12px;
 }
